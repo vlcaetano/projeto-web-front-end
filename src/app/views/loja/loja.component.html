@@ -1,0 +1,36 @@
+<body>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo&display=swap" rel="stylesheet">
+    <div class="flex-container">
+        <p>Destaques</p>
+        <div class="flex-container-jogos">
+            <img src="assets/img/seta-esquerda.png" />
+            <img src="assets/img/borderlands3.png" />
+            <img src="assets/img/seta-direita.png" />
+        </div>
+    </div>
+
+    <div class="flex-container">
+        <p>Mais vendidos</p>
+        <div class="flex-container-jogos">
+            <div class="jogo" *ngFor="let jogo of jogos">
+                <img src={{jogo.imagem}} />
+                <div class="jogo-nome">
+                    <h4>{{jogo.nome}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex-container">
+        <p>Novidades e populares</p>
+        <div class="flex-container-jogos">
+            <div class="novidades-populares" *ngFor="let nov of novidades">
+                <img src={{nov.imagem}}/>
+                <div class="jogo-nome">
+                    <h4>{{nov.nome}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

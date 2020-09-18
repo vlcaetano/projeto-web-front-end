@@ -1,0 +1,117 @@
+.container {
+    font-family: 'Archivo', sans-serif;
+    display: grid;
+    min-height: 70vh;
+    grid-template-columns: 1fr 1px 1fr;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas:
+        'boas-vindas boas-vindas boas-vindas'
+        'login-cadastro vertical-line sobre-nos';
+}
+
+.vertical-line {
+    grid-area: vertical-line;
+    height: 100%;
+    width: 1px;
+    background-color: #000;
+    /* margin: 40px; */
+}
+
+.boas-vindas {
+    grid-area: boas-vindas;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boas-vindas h1 {
+    font-size: 48px;
+}
+
+.login-cadastro,
+.email-senha,
+.botoes,
+.sobre-nos {
+    grid-area: login-cadastro;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.email-senha {
+    margin-top: 40px;
+}
+
+.login-cadastro input{
+    border-radius: 5px;
+    border: none;
+    padding: 5px 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    background-color: #c4c4c4;
+    margin-bottom: 12px;
+    height: 40px;
+    width: 320px;
+}
+
+.login-cadastro input::placeholder{
+    font-style: italic;
+    color: #f6f6f6;
+}
+
+.botoes {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.botoes a {
+    width: 150px;
+    height: 40px;
+
+    border-radius: 5px;
+    margin-bottom: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    color: #f6f6f6;
+
+    transition: background 0.2s; /* transição para o hover */
+    background: #f40f0f;
+}
+
+.botoes :nth-child(2) {
+    margin-left: 20px;
+}
+
+.botoes a:hover{
+    background: #aa0c0c;
+}
+
+.sobre-nos {
+    grid-area: sobre-nos;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sobre-nos .botoes {
+    margin: 0;
+}
+
+.sobre-nos p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 30px 70px;
+}
+
+h2 {
+    margin-top: 100px;
+}

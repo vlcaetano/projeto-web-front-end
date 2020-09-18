@@ -1,0 +1,76 @@
+/* .navbar-nav li .active a {
+    color: #f6f6f6;
+    transition: .2s;
+}
+/* .navbar-nav li a {
+    color: #f6f6f66b;
+    transition: .2s;
+}
+ 
+.navbar-nav li a:hover {
+    color: grey;
+} */
+
+body {
+    margin: 0;
+    font-family: 'Archivo', sans-serif;
+    background-color: #f7f0f0;
+}
+
+.cabecalho {
+    background: #f40f0f;
+    color: #f6f6f6;
+    /* border-bottom: solid 5px #4faddb; */
+    height: 70px;
+}
+
+.logo img {
+    height: 30px;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cabecalho a {
+    text-decoration: none;
+    color: #eee;
+    font-size: 1.3em;
+    padding: 10px 15px;
+}
+
+.menu a:hover {
+    background-color: #f6f6f6;
+    border-radius: 10px;
+    color: #000;
+}
+
+/* .cabecalho .botao {
+    border-radius: 30px;
+    padding: 10px 25px;
+    margin-right: 10px;
+} */
+
+.destaque {
+    background: #f50a31;
+    color: #fff;
+}
+/* ==================== */
+/* Solução com Flex Box */
+/* ==================== */
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.menu ul {
+    display: flex;
+    /* justify-content: space-around; */
+}
+
+/* .menu li {
+    margin: 0px 10px; distanciar os menus
+} */
