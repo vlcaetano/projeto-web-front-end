@@ -30,6 +30,8 @@ export class BibliotecaComponent implements OnInit {
     }
   ]
 
+  qtdJogos: number = this.jogos.length
+
   constructor() { }
 
   ngOnInit(): void {

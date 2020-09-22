@@ -11,6 +11,7 @@ import { BibliotecaComponent } from './views/biblioteca/biblioteca.component';
 import { LojaComponent } from './views/loja/loja.component';
 import { JogosComponent } from './views/jogos/jogos.component';
 import { PesquisarComponent } from './views/pesquisar/pesquisar.component';
+import { CadastroComponent } from './views/cadastro/cadastro.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { PesquisarComponent } from './views/pesquisar/pesquisar.component';
     BibliotecaComponent,
     LojaComponent,
     JogosComponent,
-    PesquisarComponent
+    PesquisarComponent,
+    CadastroComponent
   ],
   imports: [
     BrowserModule,

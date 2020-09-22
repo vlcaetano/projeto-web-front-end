@@ -1,0 +1,10 @@
+footer {
+    margin: 0;
+    height: 200px;
+
+    background-color: var(--color-secondary);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}

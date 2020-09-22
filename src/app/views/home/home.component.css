@@ -14,7 +14,6 @@
     height: 100%;
     width: 1px;
     background-color: #000;
-    /* margin: 40px; */
 }
 
 .boas-vindas {
@@ -36,7 +35,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
 }
 
 .email-senha {
@@ -50,7 +48,7 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 16px;
-    background-color: #c4c4c4;
+    background-color: var(--color-background-input);
     margin-bottom: 12px;
     height: 40px;
     width: 320px;
@@ -58,7 +56,7 @@
 
 .login-cadastro input::placeholder{
     font-style: italic;
-    color: #f6f6f6;
+    color: var(--color-text-light);
 }
 
 .botoes {
@@ -80,10 +78,10 @@
     justify-content: center;
 
     text-decoration: none;
-    color: #f6f6f6;
+    color: var(--color-text-light);
 
     transition: background 0.2s; /* transição para o hover */
-    background: #f40f0f;
+    background: var(--color-primary);
 }
 
 .botoes :nth-child(2) {
@@ -91,7 +89,7 @@
 }
 
 .botoes a:hover{
-    background: #aa0c0c;
+    background: var(--color-primary-dark);
 }
 
 .sobre-nos {
@@ -114,4 +112,15 @@
 
 h2 {
     margin-top: 100px;
+}
+
+@media (max-width: 1000px) {
+    .container {
+        font-family: 'Archivo', sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 70%;
+    }
 }

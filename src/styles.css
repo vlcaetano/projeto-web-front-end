@@ -1,4 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --color-primary: #cf1b1b;
+    --color-primary-dark: #900d0d;
+    --color-secondary: #423144;
+    --color-background: #ffecdf;
+    --color-background-container: #f6f6f6;
+    --color-background-input: #c4c4c4;
+    --color-background-input-secondary: #ffede3;
+    --color-text-light: #f6f6f6;
+    --color-text-dark: #000;
+    
+    /* font-size: 60%; */
+}
+
 body {
-    background-color: #f7f0f0;
+    background-color: var(--color-background);
 }

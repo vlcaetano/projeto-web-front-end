@@ -1,31 +1,33 @@
-/* .navbar-nav li .active a {
-    color: #f6f6f6;
-    transition: .2s;
-}
-/* .navbar-nav li a {
-    color: #f6f6f66b;
-    transition: .2s;
-}
- 
-.navbar-nav li a:hover {
-    color: grey;
-} */
-
-body {
+header {
     margin: 0;
     font-family: 'Archivo', sans-serif;
-    background-color: #f7f0f0;
+    /* background-color: #f7f0f0; */
 }
 
 .cabecalho {
-    background: #f40f0f;
-    color: #f6f6f6;
-    /* border-bottom: solid 5px #4faddb; */
+    background: var(--color-primary);
+    color: var(--color-text-light);
     height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.itens {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
 }
 
 .logo img {
     height: 30px;
+    transition: .2s;
+}
+
+.logo img:hover{
+    opacity: 0.6;
 }
 
 .menu ul {
@@ -36,41 +38,20 @@ body {
 
 .cabecalho a {
     text-decoration: none;
-    color: #eee;
+    color: var(--color-text-light);
     font-size: 1.3em;
     padding: 10px 15px;
+
+    transition: .2s;
 }
 
-.menu a:hover {
-    background-color: #f6f6f6;
+.menu a:hover,
+.menu a.selecionado {
+    background-color: var(--color-primary-dark);
     border-radius: 10px;
-    color: #000;
-}
-
-/* .cabecalho .botao {
-    border-radius: 30px;
-    padding: 10px 25px;
-    margin-right: 10px;
-} */
-
-.destaque {
-    background: #f50a31;
-    color: #fff;
-}
-/* ==================== */
-/* Solução com Flex Box */
-/* ==================== */
-.cabecalho {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    /* color: var(--color-text-dark); */
 }
 
 .menu ul {
     display: flex;
-    /* justify-content: space-around; */
 }
-
-/* .menu li {
-    margin: 0px 10px; distanciar os menus
-} */
