@@ -12,6 +12,7 @@ import { LojaComponent } from './views/loja/loja.component';
 import { JogosComponent } from './views/jogos/jogos.component';
 import { PesquisarComponent } from './views/pesquisar/pesquisar.component';
 import { CadastroComponent } from './views/cadastro/cadastro.component';
+import { JogoDetalhesComponent } from './views/jogo-detalhes/jogo-detalhes.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CadastroComponent } from './views/cadastro/cadastro.component';
     LojaComponent,
     JogosComponent,
     PesquisarComponent,
-    CadastroComponent
+    CadastroComponent,
+    JogoDetalhesComponent
   ],
   imports: [
     BrowserModule,

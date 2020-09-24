@@ -16,3 +16,35 @@
 body {
     background-color: var(--color-background);
 }
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-background-container);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    max-width: 1200px;
+    margin: 10px auto;
+    margin-bottom: 20px;
+}
+
+.flex-container img {
+    margin: 0;
+}
+
+.flex-container h1 {
+    font-family: 'Archivo', sans-serif;
+    font-size: 32px;
+    margin: 10px;
+}
+
+a.link-jogo {
+    text-decoration: none;
+    color: var(--color-text-dark);
+    transition: .3s;
+}
+
+a.link-jogo:hover{
+    opacity: 0.9;
+}

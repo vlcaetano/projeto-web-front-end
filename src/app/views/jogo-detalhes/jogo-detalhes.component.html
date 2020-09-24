@@ -1,0 +1,14 @@
+<app-header></app-header>
+
+<div class="flex-container">
+    <h1>{{jogo.nome}}</h1>
+    <div class="flex-container-jogos">
+        <img [src]="jogo.imgPaisagem" />
+    </div>
+
+    <div class="texto" [innerHTML]="jogo.descricao"></div>
+    
+    <div class="botoes">
+        <a routerLink="">Comprar</a>
+    </div>
+</div>

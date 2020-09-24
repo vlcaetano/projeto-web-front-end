@@ -4,13 +4,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo&display=swap" rel="stylesheet">
 
     <div class="flex-container">
-        <p>Seus jogos ({{qtdJogos}})</p>
+        <h1>Seus jogos ({{qtdJogos}})</h1>
         <div class="flex-container-jogos">
             <div class="jogo" *ngFor="let jogo of jogos">
-                <img src={{jogo.imagem}} />
-                <div class="jogo-nome">
-                    <h4>{{jogo.nome}}</h4>
-                </div>
+                <a class="link-jogo" routerLink="/jogo-detalhes/{{jogo.id}}">
+                    <img src={{jogo.imagem}} />
+                    <div class="jogo-nome">
+                        <h4>{{jogo.nome}}</h4>
+                    </div>
+                </a>
             </div>
         </div>
     </div>

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { BibliotecaComponent } from './views/biblioteca/biblioteca.component';
 import { CadastroComponent } from './views/cadastro/cadastro.component';
 import { HomeComponent } from './views/home/home.component';
+import { JogoDetalhesComponent } from './views/jogo-detalhes/jogo-detalhes.component';
 import { JogosComponent } from './views/jogos/jogos.component';
 import { LojaComponent } from './views/loja/loja.component';
 import { PesquisarComponent } from './views/pesquisar/pesquisar.component';
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'cadastro',
     component: CadastroComponent
+  },
+  {
+    path: 'jogo-detalhes/:id',
+    component: JogoDetalhesComponent
   }
 ];
 
