@@ -38,7 +38,7 @@
     flex-direction: column;
     vertical-align: top; /* caso a imagem não carregue, alinha pelo topo e não pelo baseline */
     font-family: 'Poppins', sans-serif;
-    height: 270px;
+    height: 220px;
     width: 290px;
     margin: 5px 8px;
     padding: 5px;

@@ -81,30 +81,40 @@ export class JogoDetalhesComponent implements OnInit {
     },
     {
       id: 8,
-      nome: 'JR Adventures',
-      imgRetrato: 'assets/img/retrato/jr-adventures.png',
-      imgPaisagem: 'assets/img/paisagem/jr-adventures.png',
+      nome: 'Among Us',
+      imgRetrato: 'assets/img/retrato/amongus.png',
+      imgPaisagem: 'assets/img/paisagem/amongus.png',
       destaque: false,
       maisVendido: false,
       novidade: true,
-      descricao: 'Teste <br> <br> Teste'
+      descricao: 'Jogue com 4-10 jogadores online ou via WiFi local enquanto tenta preparar sua nave para a partida, mas cuidado, pois um ou mais jogadores aleatórios entre a Tripulação são Impostores empenhados em matar todos!<br><br> Criado originalmente como um party game, recomendamos jogar com amigos em uma party em LAN ou online usando o chat de voz. Desfrute de jogo multiplataforma entre Android, iOS e PC.'
     },
     {
       id: 9,
-      nome: 'Under World',
-      imgRetrato: 'assets/img/retrato/underworld.png',
-      imgPaisagem: 'assets/img/paisagem/underworld.png',
+      nome: 'Mafia: Definitive Edition',
+      imgRetrato: 'assets/img/retrato/mafiade.png',
+      imgPaisagem: 'assets/img/paisagem/mafiade.png',
       destaque: false,
       maisVendido: false,
       novidade: true,
-      descricao: 'Teste <br> <br> Teste'
+      descricao: 'Neste jogo refeito do zero, suba na hierarquia da máfia durante a Lei Seca. Após um encontro acidental com a máfia, o taxista Tommy Angelo entra em um terrível submundo. Apesar da relutância em se relacionar com a família Salieri, Tommy logo descobre que as oportunidades são grandes demais para ignorar. <br><br> Histórias da máfia: Entre na pele de um gângster da Lei Seca e suba na hierarquia. <br><br> Lost Heaven: A paisagem urbana da década de 1930 foi recriada da arquitetura aos carros e à cultura do entreguerras para ver, ouvir e interagir.<br><br>Um clássico refeito: Fielmente recriado, com história ampliada, jogabilidade e trilha sonora original. É Mafia como você lembrava e muito mais.'
+    },
+    {
+      id: 10,
+      nome: 'Resident Evil 2',
+      imgRetrato: 'assets/img/retrato/re2.png',
+      imgPaisagem: 'assets/img/paisagem/re2.png',
+      destaque: false,
+      maisVendido: false,
+      novidade: false,
+      descricao: 'Obra prima que definiu o gênero, Resident Evil 2 retorna, completamente refeito com uma experiência narrativa mais profunda. Usando o RE Engine de propriedade da Capcom, Resident Evil 2 oferece uma nova visão na clássica saga de horror de sobrevivência com visuais realistas de tirar o fôlego, áudio imersivo de acelerar o coração, uma nova câmera sobre o ombro e controles modernos além de modos de jogabilidade do jogo original.<br><br> Em Resident Evil 2, a ação clássica, exploração tensa e a jogabilidade de resolver quebra-cabeças que definiu a série Resident Evil retorna. Os jogadores se juntam ao policial novato, Leon S. Kennedy, e à estudante universitária, Claire Redfield, que acabam juntos por uma epidemia desastrosa em Raccoon City que transformou sua população em zumbis mortais. Leon e Claire possuem suas próprias campanhas separadas, permitindo que os jogadores vejam a história da perspectiva de ambos os personagens. O destino desses dois personagens favoritos dos fãs está nas mãos dos jogadores conforme eles trabalham juntos para sobreviver e descobrir o que está por trás do terrível ataque à cidade. Será que eles sairão com vida?'
     }
   ]
 
   public jogo
 
   constructor(private route: ActivatedRoute) { 
-    // const id: number = Number(this.route.snapshot.queryParamMap.get('id'))
+    
     const id: number = Number(this.route.snapshot.params.id) // nome do parâmetro igual a como está no app-routing
 
     console.log(id)
