@@ -81,7 +81,7 @@ input {
     border: none;
     width: 100%;
     /* margin: 10px 40px; */
-    /* padding: 0 40px; */
+    padding-left: 10px;
     border-radius: 10px;
     height: 50px;
 
