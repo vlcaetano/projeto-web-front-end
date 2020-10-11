@@ -1,32 +1,37 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-
 import { Jogo } from 'src/app/models/jogo.model';
 import { JogosService } from 'src/app/services/jogos.service';
 
 @Component({
-  selector: 'app-jogo-editar',
-  templateUrl: './jogo-editar.component.html',
-  styleUrls: ['./jogo-editar.component.css']
+  selector: 'app-jogo-cadastrar',
+  templateUrl: './jogo-cadastrar.component.html',
+  styleUrls: ['./jogo-cadastrar.component.css']
 })
-export class JogoEditarComponent implements OnInit {
+export class JogoCadastrarComponent implements OnInit {
 
-  public jogo: Jogo
+  public jogo: Jogo = {
+    id: null,
+    nome: '',
+    imgRetrato: '',
+    imgPaisagem: '',
+    destaque: false,
+    maisVendido: false,
+    novidade: false,
+    descricao: ''
+  }
 
   constructor(private route: ActivatedRoute, 
               private jogosService: JogosService,
               private router: Router) {
-    
-    const id: number = Number(this.route.snapshot.params.id) // nome do parâmetro igual a como está no app-routing
 
-    this.jogo = this.jogosService.getJogoById(id)
   }
 
   ngOnInit(): void {
   }
 
-  editar() {
-    this.jogosService.editar(this.jogo)
+  cadastrar() {
+    this.jogosService.cadastrar(this.jogo)
     this.router.navigateByUrl('/admin')
   }
 
@@ -41,4 +46,5 @@ export class JogoEditarComponent implements OnInit {
   trocarNovidade() {
     this.jogo.novidade = !this.jogo.novidade
   }
+
 }

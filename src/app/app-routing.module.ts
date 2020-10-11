@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { BibliotecaComponent } from './views/biblioteca/biblioteca.component';
 import { CadastroComponent } from './views/cadastro/cadastro.component';
 import { HomeComponent } from './views/home/home.component';
+import { JogoCadastrarComponent } from './views/jogo-cadastrar/jogo-cadastrar.component';
 import { JogoDetalhesComponent } from './views/jogo-detalhes/jogo-detalhes.component';
 import { JogoEditarComponent } from './views/jogo-editar/jogo-editar.component';
 import { JogosComponent } from './views/jogos/jogos.component';
@@ -46,6 +47,10 @@ const routes: Routes = [
   {
     path: 'jogo-editar/:id',
     component: JogoEditarComponent
+  },
+  {
+    path: 'jogo-cadastrar',
+    component: JogoCadastrarComponent
   }
 ];
 

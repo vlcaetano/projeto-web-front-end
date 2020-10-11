@@ -48,3 +48,35 @@ a.link-jogo {
 a.link-jogo:hover{
     opacity: 0.9;
 }
+
+input[type='checkbox']{
+    width: 18px;
+    height: 18px;
+    margin: 5px;
+    margin-right: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance:none;
+    outline: 0;
+    border: 1px solid black;
+    border-radius: 2px;
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+    font-size: 2em;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+input[type='checkbox']:checked {
+    background-color: var(--color-primary);
+}
+
+input[type='checkbox']:checked:after {
+    content: '\2713';
+    color: white;
+    position: absolute;
+    line-height: 1rem;
+    font-size:1rem;
+    padding-left: 0.15rem;
+    margin-top: 1px;
+}

@@ -19,6 +19,7 @@ import { JogoDetalhesComponent } from './views/jogo-detalhes/jogo-detalhes.compo
 import { PainelComponent } from './views/painel/painel.component';
 import { JogoEditarComponent } from './views/jogo-editar/jogo-editar.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { JogoCadastrarComponent } from './views/jogo-cadastrar/jogo-cadastrar.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     JogoDetalhesComponent,
     PainelComponent,
     JogoEditarComponent,
-    CarouselComponent
+    CarouselComponent,
+    JogoCadastrarComponent
   ],
   imports: [
     CarouselModule,
