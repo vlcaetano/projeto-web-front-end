@@ -1,0 +1,31 @@
+button{
+    border: none;
+
+    width: 150px;
+    height: 40px;
+
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-bottom: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    color: var(--color-text-light);
+
+    transition: background 0.2s; /* transição para o hover */
+    background: var(--color-primary);
+
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--color-primary-dark);
+}
+
+form {
+    font-family: 'Archivo', sans-serif;
+    font-size: 1.1em;
+}

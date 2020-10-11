@@ -4,8 +4,10 @@ import { BibliotecaComponent } from './views/biblioteca/biblioteca.component';
 import { CadastroComponent } from './views/cadastro/cadastro.component';
 import { HomeComponent } from './views/home/home.component';
 import { JogoDetalhesComponent } from './views/jogo-detalhes/jogo-detalhes.component';
+import { JogoEditarComponent } from './views/jogo-editar/jogo-editar.component';
 import { JogosComponent } from './views/jogos/jogos.component';
 import { LojaComponent } from './views/loja/loja.component';
+import { PainelComponent } from './views/painel/painel.component';
 import { PesquisarComponent } from './views/pesquisar/pesquisar.component';
 
 const routes: Routes = [
@@ -30,12 +32,20 @@ const routes: Routes = [
     component: PesquisarComponent
   },
   {
+    path: 'admin',
+    component: PainelComponent
+  },
+  {
     path: 'cadastro',
     component: CadastroComponent
   },
   {
     path: 'jogo-detalhes/:id',
     component: JogoDetalhesComponent
+  },
+  {
+    path: 'jogo-editar/:id',
+    component: JogoEditarComponent
   }
 ];
 

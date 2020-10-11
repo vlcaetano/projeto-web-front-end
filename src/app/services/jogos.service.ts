@@ -105,7 +105,7 @@ export class JogosService {
       nome: 'Resident Evil 2',
       imgRetrato: 'assets/img/retrato/re2.png',
       imgPaisagem: 'assets/img/paisagem/re2.png',
-      destaque: false,
+      destaque: true,
       maisVendido: false,
       novidade: false,
       descricao: 'Obra prima que definiu o gênero, Resident Evil 2 retorna, completamente refeito com uma experiência narrativa mais profunda. Usando o RE Engine de propriedade da Capcom, Resident Evil 2 oferece uma nova visão na clássica saga de horror de sobrevivência com visuais realistas de tirar o fôlego, áudio imersivo de acelerar o coração, uma nova câmera sobre o ombro e controles modernos além de modos de jogabilidade do jogo original.<br><br> Em Resident Evil 2, a ação clássica, exploração tensa e a jogabilidade de resolver quebra-cabeças que definiu a série Resident Evil retorna. Os jogadores se juntam ao policial novato, Leon S. Kennedy, e à estudante universitária, Claire Redfield, que acabam juntos por uma epidemia desastrosa em Raccoon City que transformou sua população em zumbis mortais. Leon e Claire possuem suas próprias campanhas separadas, permitindo que os jogadores vejam a história da perspectiva de ambos os personagens. O destino desses dois personagens favoritos dos fãs está nas mãos dos jogadores conforme eles trabalham juntos para sobreviver e descobrir o que está por trás do terrível ataque à cidade. Será que eles sairão com vida?'
@@ -116,5 +116,39 @@ export class JogosService {
 
   getAll(): Array<Jogo> {
     return this.jogos
+  }
+
+  getJogoById(id: number): Jogo {
+    for (let obj of this.jogos) {
+      if(obj.id == id){
+        return obj
+      }
+    }
+    return null
+  }
+
+  deletar(id: number) {
+    for(let i=0; i<this.jogos.length; i++) {
+      if (id === this.jogos[i].id) {
+        this.jogos.splice(i, 1);
+        break;
+      }
+    }
+  }
+
+  cadastrar(jogo: Jogo) {
+    const id = this.jogos.length+1;
+    jogo.id = id;
+
+    this.jogos.push(jogo);
+  }
+
+  editar(jogo: Jogo) {
+    for(let obj of this.jogos) {
+      if (jogo.id === obj.id) {
+        obj = jogo;
+        break;
+      }
+    }
   }
 }

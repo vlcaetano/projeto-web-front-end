@@ -1,0 +1,28 @@
+.botoes a {
+    width: 100px;
+    height: 40px;
+
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    font-size: .9em;
+    font-family: 'Archivo', sans-serif;
+    color: var(--color-text-light);
+
+    transition: background 0.2s;
+    background: var(--color-primary);
+    cursor: pointer;
+}
+
+.botoes a:hover{
+    background: var(--color-primary-dark);
+}
+
+table {
+    font-size: 1.1em;
+    font-family: 'Archivo', sans-serif;
+}
