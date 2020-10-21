@@ -12,7 +12,7 @@ export class PainelComponent implements OnInit {
   jogos: Array<Jogo> = []
 
   constructor(private jogosService: JogosService) { 
-    this.jogos = this.jogosService.getAll()
+    this.atualizarDados()
   }
 
   ngOnInit(): void {
@@ -20,5 +20,10 @@ export class PainelComponent implements OnInit {
 
   deletar(id: number) {
     this.jogosService.deletar(id)
+      .subscribe(() => this.atualizarDados())
+  }
+
+  atualizarDados() {
+    this.jogosService.getAll().subscribe((jogos: Jogo[]) => this.jogos = jogos)
   }
 }

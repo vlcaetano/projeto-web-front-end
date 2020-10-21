@@ -13,7 +13,9 @@ export class JogosComponent implements OnInit {
   jogos: Array<Jogo> = []
 
   constructor(private jogosService: JogosService) { 
-    this.jogos = this.jogosService.getAll();
+    this.jogosService.getAll().subscribe((x: Jogo[]) => {
+      this.jogos = x
+    })
   }
 
   ngOnInit(): void {

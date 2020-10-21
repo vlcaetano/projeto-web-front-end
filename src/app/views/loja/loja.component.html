@@ -1,41 +1,35 @@
-
 <app-header></app-header>
 <div class="flex-container">
-    <h1>Destaques</h1>
-    <div class="flex-container-jogos">
-        <!-- <img src="assets/img/seta-esquerda.png" />
-        <a class="link-jogo" routerLink="/jogo-detalhes/1">
-            <img src="assets/img/paisagem/borderlands3.png" />
-        </a>
-        <img src="assets/img/seta-direita.png" /> -->
-        <app-carousel></app-carousel>
-    </div>
+  <h1>Destaques</h1>
+  <div class="flex-container-jogos">
+    <app-carousel></app-carousel>
+  </div>
 </div>
 
 <div class="flex-container">
-    <h1>Mais vendidos</h1>
-    <div class="flex-container-jogos">
-        <div class="jogo" *ngFor="let jogo of maisVendidos">
-            <a class="link-jogo" routerLink="/jogo-detalhes/{{jogo.id}}">
-                <img src={{jogo.imgRetrato}} />
-                <div class="jogo-nome">
-                    <h4>{{jogo.nome}}</h4>
-                </div>
-            </a>
+  <h1>Mais vendidos</h1>
+  <div class="flex-container-jogos">
+    <div class="jogo" *ngFor="let jogo of maisVendidos">
+      <a class="link-jogo" routerLink="/jogo-detalhes/{{jogo.id}}">
+        <img src={{jogo.imgRetrato}} />
+        <div class="jogo-nome">
+          <h4>{{jogo.nome}}</h4>
         </div>
+      </a>
     </div>
+  </div>
 </div>
 
 <div class="flex-container">
-    <h1>Novidades e populares</h1>
-    <div class="flex-container-jogos">
-        <div class="novidades-populares" *ngFor="let nov of novidadesPopulares">
-            <a class="link-jogo" routerLink="/jogo-detalhes/{{nov.id}}">
-                <img src={{nov.imgPaisagem}}/>
-                <div class="jogo-nome">
-                    <h4>{{nov.nome}}</h4>
-                </div>
-            </a>
+  <h1>Novidades e populares</h1>
+  <div class="flex-container-jogos">
+    <div class="novidades-populares" *ngFor="let nov of novidadesPopulares">
+      <a class="link-jogo" routerLink="/jogo-detalhes/{{nov.id}}">
+        <img src={{nov.imgPaisagem}} />
+        <div class="jogo-nome">
+          <h4>{{nov.nome}}</h4>
         </div>
+      </a>
     </div>
+  </div>
 </div>

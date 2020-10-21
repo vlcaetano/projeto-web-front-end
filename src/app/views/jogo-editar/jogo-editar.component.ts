@@ -11,23 +11,35 @@ import { JogosService } from 'src/app/services/jogos.service';
 })
 export class JogoEditarComponent implements OnInit {
 
-  public jogo: Jogo
+  public jogo: Jogo = {
+    id: null,
+    nome: '',
+    imgRetrato: '',
+    imgPaisagem: '',
+    descricao: '',
+    destaque: null,
+    maisVendido: null,
+    novidade: null,
+  }
+
+  private id: number
 
   constructor(private route: ActivatedRoute, 
               private jogosService: JogosService,
               private router: Router) {
     
-    const id: number = Number(this.route.snapshot.params.id) // nome do parâmetro igual a como está no app-routing
+    this.id = Number(this.route.snapshot.params.id) // nome do parâmetro igual a como está no app-routing
 
-    this.jogo = this.jogosService.getJogoById(id)
+    this.jogosService.getJogoById(this.id)
+      .subscribe((jogo: Jogo) => this.jogo = jogo)
   }
 
   ngOnInit(): void {
   }
 
   editar() {
-    this.jogosService.editar(this.jogo)
-    this.router.navigateByUrl('/admin')
+    this.jogosService.editar(this.jogo, this.id)
+      .subscribe(() => this.router.navigateByUrl('/admin'))
   }
 
   trocarDestaque() {

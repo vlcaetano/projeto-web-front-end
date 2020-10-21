@@ -14,9 +14,10 @@ export class CarouselComponent implements OnInit {
 
   constructor(private jogosService: JogosService) { 
 
-    this.jogos = this.jogosService.getAll()
-
-    this.destaques = this.jogos.filter(jogo => jogo.destaque)
+    this.jogosService.getAll().subscribe((jogos: Jogo[]) => {
+      this.jogos = jogos
+      this.destaques = this.jogos.filter(jogo => jogo.destaque)
+    })
   }
 
   ngOnInit(): void {

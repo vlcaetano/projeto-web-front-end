@@ -9,24 +9,16 @@ import { JogosService } from 'src/app/services/jogos.service';
 })
 export class LojaComponent implements OnInit {
 
-
-  destaques = []
   maisVendidos = []
   novidadesPopulares = []
 
-  jogos: Array<Jogo> = []
-
   constructor(private jogosService: JogosService) {
-    this.jogos = jogosService.getAll()
-
-    // const testeDestaque = jogo => jogo.destaque
-    const testeMaisVendido = jogo => jogo.maisVendido
-    const testeNovidade = jogo => jogo.novidade
-
-    // this.destaques = this.jogos.filter(testeDestaque)
-    this.maisVendidos = this.jogos.filter(testeMaisVendido)
-    this.novidadesPopulares = this.jogos.filter(testeNovidade)
-   }
+    this.jogosService.getAll()
+      .subscribe((jogos: Jogo[]) => {
+        this.maisVendidos = jogos.filter(jogo => jogo.maisVendido)
+        this.novidadesPopulares = jogos.filter(jogo => jogo.novidade)
+      })
+  }
 
   ngOnInit(): void {
   }

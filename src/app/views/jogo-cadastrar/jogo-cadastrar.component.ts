@@ -32,7 +32,7 @@ export class JogoCadastrarComponent implements OnInit {
 
   cadastrar() {
     this.jogosService.cadastrar(this.jogo)
-    this.router.navigateByUrl('/admin')
+      .subscribe(() => this.router.navigateByUrl('/admin'))
   }
 
   trocarDestaque() {
