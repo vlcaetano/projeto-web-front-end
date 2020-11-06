@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
 import { BibliotecaComponent } from './views/biblioteca/biblioteca.component';
 import { CadastroComponent } from './views/cadastro/cadastro.component';
 import { HomeComponent } from './views/home/home.component';
@@ -10,6 +11,8 @@ import { JogosComponent } from './views/jogos/jogos.component';
 import { LojaComponent } from './views/loja/loja.component';
 import { PainelComponent } from './views/painel/painel.component';
 import { PesquisarComponent } from './views/pesquisar/pesquisar.component';
+
+import { AuthGuardService } from './guards/auth-guard.service';
 
 const routes: Routes = [
   {
@@ -34,7 +37,8 @@ const routes: Routes = [
   },
   {
     path: 'admin',
-    component: PainelComponent
+    component: PainelComponent,
+    canActivate: [ AuthGuardService ]
   },
   {
     path: 'cadastro',

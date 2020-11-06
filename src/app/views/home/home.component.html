@@ -7,11 +7,11 @@
     <div class="login-cadastro">
         <h2>Faça login para acessar o site</h2>
         <div class="email-senha">
-            <input type="email" name="email" placeholder="Email">
-            <input type="password" name="senha" placeholder="Senha">
+            <input type="email" name="email" placeholder="Email" [(ngModel)]="login" (keyup.enter)="logar()">
+            <input type="password" name="senha" placeholder="Senha" [(ngModel)]="senha" (keyup.enter)="logar()">
         </div>
         <div class="botoes">
-            <a routerLink="/loja">Iniciar sessão</a>
+            <a (click)="logar()">Iniciar sessão</a>
             <a routerLink="/cadastro">Cadastre-se</a>
         </div>
     </div>
