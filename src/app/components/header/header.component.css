@@ -49,9 +49,29 @@ header {
 .menu a.selecionado {
     background-color: var(--color-primary-dark);
     border-radius: 10px;
-    /* color: var(--color-text-dark); */
 }
 
 .menu ul {
     display: flex;
+}
+
+@media(max-width: 1100px) {
+    .itens {
+        width: 80%;
+    }
+
+    .cabecalho a {
+        font-size: 1em;
+        font-weight: 600;
+    }
+}
+
+@media(max-width: 700px) {
+    .itens {
+        justify-content: center;
+    }
+    
+    .menu {
+        display: none;
+    }
 }

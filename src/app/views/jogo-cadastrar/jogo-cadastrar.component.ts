@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
+import { Validators, FormGroup, FormBuilder } from '@angular/forms'
+
 import { Jogo } from 'src/app/models/jogo.model';
 import { JogosService } from 'src/app/services/jogos.service';
 
@@ -10,41 +12,44 @@ import { JogosService } from 'src/app/services/jogos.service';
 })
 export class JogoCadastrarComponent implements OnInit {
 
-  public jogo: Jogo = {
-    id: null,
-    nome: '',
-    imgRetrato: '',
-    imgPaisagem: '',
-    destaque: false,
-    maisVendido: false,
-    novidade: false,
-    descricao: ''
-  }
+  jogoForm: FormGroup
+  jogo: Jogo
 
-  constructor(private route: ActivatedRoute, 
-              private jogosService: JogosService,
-              private router: Router) {
+  submitted: boolean = false;
+  
+  constructor(private jogosService: JogosService,
+              private router: Router,
+              private fb: FormBuilder) {
+      
+    }
+    
+    ngOnInit(): void {
+      this.jogoForm = this.fb.group({
+        id: [null],
+        nome: ['', Validators.required],
+        imgRetrato: ['', Validators.required],
+        imgPaisagem: ['', Validators.required],
+        destaque: [false],
+        maisVendido: [false],
+        novidade: [false],
+        descricao: ['', [Validators.required, Validators.minLength(50)]]
+      })
+    }
 
-  }
+  onSubmit() {
+    this.submitted = true;
 
-  ngOnInit(): void {
-  }
+    if(this.jogoForm.invalid) {
+      return
+    }
 
-  cadastrar() {
+    this.jogo = this.jogoForm.value
     this.jogosService.cadastrar(this.jogo)
       .subscribe(() => this.router.navigateByUrl('/admin'))
   }
 
-  trocarDestaque() {
-    this.jogo.destaque = !this.jogo.destaque
-  }
-
-  trocarMaisVendido() {
-    this.jogo.maisVendido = !this.jogo.maisVendido
-  }
-
-  trocarNovidade() {
-    this.jogo.novidade = !this.jogo.novidade
-  }
-
+  get nome() { return this.jogoForm.get('nome') }
+  get imgRetrato() { return this.jogoForm.get('imgRetrato') }
+  get imgPaisagem() { return this.jogoForm.get('imgPaisagem') }
+  get descricao() { return this.jogoForm.get('descricao') }
 }
