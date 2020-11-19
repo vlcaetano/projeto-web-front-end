@@ -27,3 +27,10 @@ p, .texto {
 .botoes a:hover{
     background: var(--color-primary-dark);
 }
+
+.erro-compra {
+  font-size: 1.3em;
+  font-weight: 600;
+  color: red;
+  padding: 20px;
+}

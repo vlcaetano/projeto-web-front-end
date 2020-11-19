@@ -41,6 +41,13 @@ export class LoginService {
       )
   }
 
+  editar(usuario: Usuario, id: number): Observable<Usuario> {
+    return this.http.put<Usuario>(`${this.url}/${id}`, usuario)
+      .pipe(
+        catchError(this.tratarErro)
+      )
+  }
+
   getUsuarioLogado(): Usuario {
     return this.usuarioLogado
   }

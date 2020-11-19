@@ -37,7 +37,10 @@
       "nomeUsuario": "vitor",
       "email": "vitor@email.com",
       "senha": "vitor",
-      "jogosComprados": [],
+      "jogosComprados": [
+        1,
+        2
+      ],
       "admin": false
     }
   ],
