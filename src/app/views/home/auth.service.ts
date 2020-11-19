@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 
 import { Usuario } from 'src/app/models/usuario.model';
 import { LoginService } from 'src/app/services/login.service';
-import { PesquisarComponent } from '../pesquisar/pesquisar.component';
 
 @Injectable({
   providedIn: 'root'
@@ -13,9 +12,9 @@ export class AuthService {
 
   constructor(private router: Router, private loginService: LoginService) { }
 
-  realizarLogin(nomeUsuario: string, senha: string) {
+  async realizarLogin(nomeUsuario: string, senha: string) {
 
-    this.loginService.getUsuario(nomeUsuario, senha).subscribe((dado: Usuario[]) => {
+    await this.loginService.getUsuario(nomeUsuario, senha).toPromise().then((dado: Usuario[]) => {
       const resposta = dado[0]
 
       if(resposta != undefined) {
@@ -28,7 +27,7 @@ export class AuthService {
         this.loginService.setUsuarioLogado(undefined)
       }
     })
-
+    
   }
 
   obterUsuarioAutenticado() {

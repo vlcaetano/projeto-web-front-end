@@ -22,6 +22,9 @@
           (keyup.enter)="logar()"
         >
       </div>
+      <div *ngIf="!usuario && submitted" class="erro">
+        **Usuário e/ou senha inválidos
+      </div>
       <div class="botoes">
         <a (click)="logar()">Iniciar sessão</a>
         <a routerLink="/cadastro">Cadastre-se</a>
@@ -38,8 +41,5 @@
       como: Super Mario World, God of War, Fortnite,
       JR Adventures, Counter Strike, Under World, entre outros.
     </p>
-    <div class="botoes">
-      <a routerLink="/">Saiba mais</a>
-    </div>
   </div>
 </div>
