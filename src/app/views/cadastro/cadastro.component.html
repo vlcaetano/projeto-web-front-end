@@ -1,49 +1,74 @@
 <header class="cabecalho">
-    <div class="itens">
-        <a routerLink="/">
-            <img class="seta-voltar" src="assets/img/seta-voltar.svg" alt="Voltar" />
-        </a>
-    
-        <a routerLink="/">
-            <img src="assets/img/coroa.png" alt="Logo" />
-        </a>
-    </div>
+  <div class="itens">
+    <a routerLink="/">
+      <img class="seta-voltar" src="assets/img/seta-voltar.svg" alt="Voltar" />
+    </a>
+
+    <a routerLink="/">
+      <img src="assets/img/coroa.png" alt="Logo" />
+    </a>
+  </div>
 </header>
 
-<form action="">
-    <fieldset>
-        <legend>Seus dados</legend>
+<form [formGroup]="usuarioForm" (ngSubmit)="onSubmit()">
+  <fieldset>
+    <legend>Seus dados</legend>
 
-        <div class="horizontal-line"></div>
+    <div class="horizontal-line"></div>
 
-        <div class="input-block">
-            <label for="nome">Nome completo</label>
-            <input type="text" name="nome">
-        </div>
-    
-        <div class="input-block">
-            <label for="usuario">Nome de usuário</label>
-            <input type="text" name="usuario">
-        </div>
-    
-        <div class="input-block">
-            <label for="url-imagem">Link da foto de perfil</label>
-            <input type="url" name="url-imagem">
-        </div>
+    <div class="input-block">
+      <label for="nomeCompleto">Nome completo</label>
+      <input 
+        type="text" 
+        id="nomeCompleto" 
+        name="nomeCompleto" 
+        formControlName="nomeCompleto"
+      >
+      <div *ngIf="nomeCompleto.invalid && (nomeCompleto.touched || submitted)" class="erro">
+        **Campo obrigatório
+      </div>
+    </div>
 
-        <div class="input-block">
-            <label for="email">Email</label>
-            <input type="email" name="email">
-        </div>
-    
-        <div class="input-block">
-            <label for="senha">Senha</label>
-            <input type="password" name="senha">
-        </div>
-    
-        <button type="submit">Concluir</button>
-    </fieldset>
+    <div class="input-block">
+      <label for="nomeUsuario">Nome de usuário</label>
+      <input 
+        type="text" 
+        id="nomeUsuario"
+        name="nomeUsuario"
+        formControlName="nomeUsuario"
+      >
+      <div *ngIf="nomeUsuario.invalid && (nomeUsuario.touched || submitted)" class="erro">
+        **Campo obrigatório
+      </div>
+    </div>
+
+    <div class="input-block">
+      <label for="email">Email</label>
+      <input 
+        type="email" 
+        id="email"
+        name="email"
+        formControlName="email"
+      >
+      <div *ngIf="email.invalid && (email.touched || submitted)" class="erro">
+        **Informar email válido
+      </div>
+    </div>
+
+    <div class="input-block">
+      <label for="senha">Senha</label>
+      <input 
+        type="password" 
+        id="senha"
+        name="senha"
+        formControlName="senha"
+      >
+      <div *ngIf="senha.invalid && (senha.touched || submitted)" class="erro">
+        **Campo obrigatório
+      </div>
+    </div>
+
+    <button type="submit">Concluir</button>
+  </fieldset>
 
 </form>
-
-

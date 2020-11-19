@@ -1,43 +1,38 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Jogo } from 'src/app/models/jogo.model';
+import { Usuario } from 'src/app/models/usuario.model';
+import { JogosService } from 'src/app/services/jogos.service';
+import { LoginService } from 'src/app/services/login.service';
+
 @Component({
   selector: 'app-biblioteca',
   templateUrl: './biblioteca.component.html',
   styleUrls: ['./biblioteca.component.css']
 })
 export class BibliotecaComponent implements OnInit {
+  usuarioLogado: Usuario
 
-  jogos: any[] = [
-    {
-      id: 2,
-      imagem: 'assets/img/retrato/avengers.png',
-      nome: 'Marvel\'s Avengers'
-    },
-    {
-      id: 3,
-      imagem: 'assets/img/retrato/cod.png',
-      nome: 'Call of Duty: Black Ops Cold War'
-    },
-    {
-      id: 4,
-      imagem: 'assets/img/retrato/samurai.png',
-      nome: 'Samurai Jack: Battle Through Time'
-    },
-    {
-      id: 5,
-      imagem: 'assets/img/retrato/monster.png',
-      nome: 'Monster Hunter World: Iceborne'
-    },
-    {
-      id: 6,
-      imagem: 'assets/img/retrato/polybridge.png',
-      nome: 'Poly Bridge'
+  jogos: Jogo[] = []
+
+  qtdJogos: number = 0
+
+  constructor(private loginService: LoginService, 
+              private jogosService: JogosService) {
+
+    this.usuarioLogado = this.loginService.getUsuarioLogado()
+
+    if (this.usuarioLogado) {
+      
+      this.jogosService.getJogosById(this.usuarioLogado.jogosComprados)
+        .forEach((obsJogo) => {
+          obsJogo.subscribe((jogo) => {
+            this.jogos.push(jogo)
+            this.qtdJogos++
+          })
+        })
     }
-  ]
-
-  qtdJogos: number = this.jogos.length
-
-  constructor() { }
+  }
 
   ngOnInit(): void {
   }

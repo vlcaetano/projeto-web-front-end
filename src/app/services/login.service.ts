@@ -11,6 +11,7 @@ import { Usuario } from '../models/usuario.model';
 export class LoginService {
 
   private url: string = 'http://localhost:3000/usuarios'
+  private usuarioLogado: Usuario
 
   constructor(private http: HttpClient) { }
 
@@ -25,12 +26,26 @@ export class LoginService {
     return throwError('Algo errado aconteceu; tente novamente mais tarde.');
   }
 
-  getUsuario(login: string, senha: string): Observable<Usuario[]> {
-    return this.http.get<Usuario[]>(`${this.url}?login=${login}&senha=${senha}`)
+  getUsuario(nomeUsuario: string, senha: string): Observable<Usuario[]> {
+    return this.http.get<Usuario[]>(`${this.url}?nomeUsuario=${nomeUsuario}&senha=${senha}`)
       .pipe(
         retry(2),
         catchError(this.tratarErro)
       )
   }
 
+  cadastrar(usuario: Usuario): Observable<Usuario> {
+    return this.http.post<Usuario>(this.url, usuario)
+      .pipe(
+        catchError(this.tratarErro)
+      )
+  }
+
+  getUsuarioLogado(): Usuario {
+    return this.usuarioLogado
+  }
+
+  setUsuarioLogado(usuario: Usuario) {
+    this.usuarioLogado = usuario
+  }
 }

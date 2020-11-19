@@ -1,45 +1,98 @@
 <app-header></app-header>
 <div class="flex-container">
-    <h1>Editar Jogo</h1>
-    
-    <form class="col-9">
-        <div class="form-group">
-            <label for="nome">Nome</label>
-            <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="jogo.nome">
-        </div>
+  <h1>Editar Jogo</h1>
 
-        <div class="form-group">
-            <label for="imgRetrato">Imagem Retrato</label>
-            <input type="text" class="form-control" id="imgRetrato" name="imgRetrato" [(ngModel)]="jogo.imgRetrato">
-        </div>
+  <form class="col-9" [formGroup]="jogoForm" (ngSubmit)="editar()">
+    <div class="form-group">
+      <label for="nome">Nome</label>
+      <input 
+        type="text" 
+        class="form-control" 
+        id="nome" 
+        name="nome" 
+        formControlName="nome"
+      >
+      <div *ngIf="nome.invalid && (nome.touched || submitted)" class="erro">
+        **Campo obrigatório
+      </div>
+    </div>
 
-        <div class="form-group">
-            <label for="imgPaisagem">Imagem Paisagem</label>
-            <input type="text" class="form-control" id="imgPaisagem" name="imgPaisagem" [(ngModel)]="jogo.imgPaisagem">
-        </div>
+    <div class="form-group">
+      <label for="imgRetrato">Imagem Retrato</label>
+      <input 
+        type="text" 
+        class="form-control" 
+        id="imgRetrato" 
+        name="imgRetrato" 
+        formControlName="imgRetrato"
+      >
+      <div *ngIf="imgRetrato.invalid && (imgRetrato.touched || submitted)" class="erro">
+        **Campo obrigatório
+      </div>
 
-        <div class="form-group">
-            <label for="descricao">Descrição</label>
-            <textarea class="form-control" id="descricao" name="descricao" rows="3" [(ngModel)]="jogo.descricao"></textarea>
-        </div>
+    </div>
 
-        <div class="checkboxes">
-            <div class="form-group checkbox-block">
-                <input type="checkbox" (click)="trocarDestaque()" id="destaque" [checked]="jogo.destaque == true">
-                <label class="form-check-label" for="destaque">Destaque</label>
-            </div>
+    <div class="form-group">
+      <label for="imgPaisagem">Imagem Paisagem</label>
+      <input 
+        type="text" 
+        class="form-control" 
+        id="imgPaisagem" 
+        name="imgPaisagem" 
+        formControlName="imgPaisagem"
+      >
+      <div *ngIf="imgPaisagem.invalid && (imgPaisagem.touched || submitted)" class="erro">
+        **Campo obrigatório
+      </div>
+        
+    </div>
 
-            <div class="form-group checkbox-block">
-                <input type="checkbox" (click)="trocarMaisVendido()" id="maisVendido" [checked]="jogo.maisVendido == true">
-                <label class="form-check-label" for="destaque">Mais Vendido</label>
-            </div>
+    <div class="form-group">
+      <label for="descricao">Descrição</label>
+      <textarea 
+        class="form-control" 
+        id="descricao" 
+        name="descricao" 
+        rows="3" 
+        formControlName="descricao"
+      ></textarea>
+      <div *ngIf="descricao.invalid && (descricao.touched || submitted)" class="erro">
+        **Escreva uma descrição de pelo menos 50 letras
+      </div>
+    </div>
 
-            <div class="form-group checkbox-block">
-                <input type="checkbox" (click)="trocarNovidade()" id="novidade" [checked]="jogo.novidade == true">
-                <label class="form-check-label" for="destaque">Novidade</label>
-            </div>
-        </div>
+    <div class="checkboxes">
+      <div class="form-group checkbox-block">
+        <input 
+          type="checkbox" 
+          id="destaque" 
+          formControlName="destaque"
+        >
+        <label class="form-check-label" for="destaque">Destaque</label>
+      </div>
 
-        <button type="button" (click)="editar()">Salvar</button>
-    </form>
+      <div class="form-group checkbox-block">
+        <input 
+          type="checkbox" 
+          id="maisVendido" 
+          formControlName="maisVendido"
+        >
+        <label class="form-check-label" for="maisVendido">Mais Vendido</label>
+      </div>
+
+      <div class="form-group checkbox-block">
+        <input 
+          type="checkbox" 
+          id="novidade" 
+          formControlName="novidade"
+        >
+        <label class="form-check-label" for="novidade">Novidade</label>
+      </div>
+    </div>
+
+    <div *ngIf="jogoForm.invalid" class="text-center mt-1 mb-3">
+      Preencha todos os campos para salvar
+    </div>
+    <button type="submit">Salvar</button>
+  </form>
 </div>

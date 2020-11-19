@@ -44,6 +44,14 @@ export class JogosService {
       )
   }
 
+  getJogosById(ids: number[]): Observable<Jogo>[] {
+    let jogos: Observable<Jogo>[] = []
+    for (let jogoId of ids) {
+      jogos.push(this.http.get<Jogo>(`${this.url}/${jogoId}`))
+    }
+    return jogos
+  }
+
   deletar(id: number) {
     return this.http.delete<Jogo>(`${this.url}/${id}`)
       .pipe(

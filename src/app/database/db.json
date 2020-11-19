@@ -2,14 +2,42 @@
   "usuarios": [
     {
       "id": 1,
-      "login": "admin",
+      "nomeCompleto": "Administrador",
+      "nomeUsuario": "admin",
+      "email": "admin@email.com",
       "senha": "admin",
+      "jogosComprados": [
+        1,
+        2,
+        3,
+        4
+      ],
       "admin": true
     },
     {
       "id": 2,
-      "login": "teste",
+      "nomeCompleto": "Teste",
+      "nomeUsuario": "teste",
+      "email": "teste@email.com",
       "senha": "teste",
+      "jogosComprados": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "admin": false
+    },
+    {
+      "id": 3,
+      "nomeCompleto": "Vitor",
+      "nomeUsuario": "vitor",
+      "email": "vitor@email.com",
+      "senha": "vitor",
+      "jogosComprados": [],
       "admin": false
     }
   ],

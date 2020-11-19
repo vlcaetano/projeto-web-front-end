@@ -1,32 +1,46 @@
 <app-header></app-header>
 <div class="container">
-    <div class="boas-vindas">
-        <h1>Obrigado por visitar a Royal!</h1>
-    </div>
+  <div class="boas-vindas">
+    <h1>Obrigado por visitar a Royal!</h1>
+  </div>
 
+  <form [formGroup]="loginForm" (ngSubmit)="logar()">
     <div class="login-cadastro">
-        <h2>Faça login para acessar o site</h2>
-        <div class="email-senha">
-            <input type="email" name="email" placeholder="Email" [(ngModel)]="login" (keyup.enter)="logar()">
-            <input type="password" name="senha" placeholder="Senha" [(ngModel)]="senha" (keyup.enter)="logar()">
-        </div>
-        <div class="botoes">
-            <a (click)="logar()">Iniciar sessão</a>
-            <a routerLink="/cadastro">Cadastre-se</a>
-        </div>
+      <h2>Faça login para acessar o site</h2>
+      <div class="email-senha">
+        <input 
+          type="text" 
+          name="usuario" 
+          placeholder="Nome de usuário" 
+          formControlName="login" 
+          (keyup.enter)="logar()"
+        >
+        <input 
+          type="password" 
+          name="senha" 
+          placeholder="Senha" 
+          formControlName="senha" 
+          (keyup.enter)="logar()"
+        >
+      </div>
+      <div class="botoes">
+        <a (click)="logar()">Iniciar sessão</a>
+        <a routerLink="/cadastro">Cadastre-se</a>
+      </div>
     </div>
+  </form>
 
-    <div class="vertical-line"></div>
+  <div class="vertical-line"></div>
 
-    <div class="sobre-nos">
-        <h2>Sobre nós</h2>
-        <p>
-            Talvez você nos conheça por alguns de nossos jogos, 
-            como: Super Mario World, God of War, Fortnite, 
-            JR Adventures, Counter Strike, Under World, entre outros.
-        </p>
-        <div class="botoes">
-            <a routerLink="/">Saiba mais</a>
-        </div>
+  <div class="sobre-nos">
+    <h2>Sobre nós</h2>
+    <p>
+      Talvez você nos conheça por alguns de nossos jogos,
+      como: Super Mario World, God of War, Fortnite,
+      JR Adventures, Counter Strike, Under World, entre outros.
+    </p>
+    <div class="botoes">
+      <a routerLink="/">Saiba mais</a>
     </div>
+  </div>
 </div>
