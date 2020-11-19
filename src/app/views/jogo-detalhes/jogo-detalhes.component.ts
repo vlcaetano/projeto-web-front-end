@@ -41,7 +41,7 @@ export class JogoDetalhesComponent implements OnInit {
 
         this.jogo = jogo
 
-        if (this.usuario.jogosComprados.includes(this.jogo.id)) {
+        if (this.usuario && this.usuario.jogosComprados.includes(this.jogo.id)) {
           this.jogoComprado = true
         }
       })
