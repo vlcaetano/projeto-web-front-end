@@ -14,7 +14,7 @@
                 <li>
                     <a routerLink="/pesquisar">Pesquisar</a>
                 </li>
-                <li>
+                <li *ngIf="isAdmin == true">
                     <a routerLink="/admin">Admin</a>
                 </li>
             </ul>
