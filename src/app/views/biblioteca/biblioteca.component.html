@@ -3,7 +3,8 @@
   <div class="flex-container">
     <h1>Seus jogos ({{qtdJogos}})</h1>
     <div class="flex-container-jogos">
-      <h2 *ngIf="qtdJogos === 0">A conta não possui jogos</h2>
+      <h2 *ngIf="qtdJogos === 0 && usuarioLogado">A conta não possui jogos</h2>
+      <h2 *ngIf="!usuarioLogado">Faça login para acessar a biblioteca!</h2>
       <div class="jogo" *ngFor="let jogo of jogos">
         <a class="link-jogo" routerLink="/jogo-detalhes/{{jogo.id}}">
           <img src={{jogo.imgRetrato}} />
