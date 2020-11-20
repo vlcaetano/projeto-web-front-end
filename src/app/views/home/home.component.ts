@@ -17,8 +17,11 @@ export class HomeComponent implements OnInit {
   submitted: boolean = false
 
   constructor(private authService: AuthService,
-              private loginService: LoginService,
-              private fb: FormBuilder) { }
+    private loginService: LoginService,
+    private fb: FormBuilder) {
+
+    this.usuario = this.loginService.getUsuarioLogado()
+  }
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
@@ -31,10 +34,16 @@ export class HomeComponent implements OnInit {
     this.authService.realizarLogin(
       this.loginForm.controls['login'].value,
       this.loginForm.controls['senha'].value
-      ).then(() => {
-        this.usuario = this.loginService.getUsuarioLogado()
-        this.submitted = true
-      })
+    ).then(() => {
+      this.usuario = this.loginService.getUsuarioLogado()
+      this.submitted = true
+    })
+  }
+
+  logout() {
+    this.usuario = undefined
+    this.loginService.setUsuarioLogado(undefined)
+    this.authService.setUsuarioAutenticado(false)
   }
 
   get login() { return this.loginForm.get('login') }

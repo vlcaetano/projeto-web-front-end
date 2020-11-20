@@ -3,7 +3,14 @@
     <h1>Obrigado por visitar a Royal!</h1>
   </div>
 
-  <form [formGroup]="loginForm" (ngSubmit)="logar()">
+  <div *ngIf="usuario" class="login-cadastro">
+    <h2>Olá, {{usuario.nomeUsuario}}! Acesse a loja para ver nossos jogos!</h2>
+    <div class="botoes">
+      <a (click)="logout()">Finalizar sessão</a>
+    </div>
+  </div>
+
+  <form [formGroup]="loginForm" (ngSubmit)="logar()" *ngIf="!usuario">
     <div class="login-cadastro">
       <h2>Faça login para acessar o site</h2>
       <div class="email-senha">

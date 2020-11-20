@@ -12,6 +12,6 @@ export class AuthGuardService implements CanActivate {
   constructor(private authService: AuthService) { }
 
   canActivate(): Observable<boolean> | boolean {
-    return this.authService.obterUsuarioAutenticado()
+    return this.authService.getUsuarioAutenticado()
   }
 }

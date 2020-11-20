@@ -30,7 +30,11 @@ export class AuthService {
     
   }
 
-  obterUsuarioAutenticado() {
+  getUsuarioAutenticado() {
     return this.usuarioAutenticado
+  }
+
+  setUsuarioAutenticado(usuarioAutenticado: boolean) {
+    this.usuarioAutenticado = usuarioAutenticado
   }
 }
