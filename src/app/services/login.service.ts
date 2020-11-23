@@ -26,10 +26,25 @@ export class LoginService {
     return throwError('Algo errado aconteceu; tente novamente mais tarde.');
   }
 
+  getAll(): Observable<Usuario[]> {
+    return this.http.get<Usuario[]>(this.url)
+      .pipe(
+        retry(2),
+        catchError(this.tratarErro)
+      )
+  }
+
   getUsuario(nomeUsuario: string, senha: string): Observable<Usuario[]> {
     return this.http.get<Usuario[]>(`${this.url}?nomeUsuario=${nomeUsuario}&senha=${senha}`)
       .pipe(
         retry(2),
+        catchError(this.tratarErro)
+      )
+  }
+
+  deletar(id: number) {
+    return this.http.delete<Usuario>(`${this.url}/${id}`)
+      .pipe(
         catchError(this.tratarErro)
       )
   }

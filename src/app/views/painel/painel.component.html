@@ -1,37 +1,68 @@
 <div class="flex-container">
-    <h1>Jogos</h1>
-    <div class="botao-novo">
-        <a routerLink="/jogo-cadastrar">
-            Novo 
-        </a>
-    </div>
-    <div class="col-10 mt-3">
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                <th scope="col" style="width: 5%" class="text-center">Id</th>
-                <th scope="col">Nome</th>
-                <th scope="col" style="width: 10%"></th>
-                <th scope="col" style="width: 10%"></th>
-                </tr>
-            </thead>
-    
-            <tbody>
-                <tr *ngFor="let jogo of jogos">
-                    <th scope="row" class="text-center align-middle">{{jogo.id}}</th>
-                    <td class="align-middle">{{jogo.nome}}</td>
-                    <td class="align-middle">
-                        <div class="botoes">
-                            <a routerLink="/jogo-editar/{{jogo.id}}">Editar</a>
-                        </div>
-                    </td>
-                    <td class="align-middle">
-                        <div class="botoes">
-                            <a (click)="deletar(jogo.id)">Deletar</a>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+  <h1>Jogos</h1>
+  <div class="botao-novo">
+    <a routerLink="/jogo-cadastrar">
+      Novo
+    </a>
+  </div>
+  <div class="col-10 mt-3">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col" style="width: 5%" class="text-center">Id</th>
+          <th scope="col">Nome</th>
+          <th scope="col" style="width: 10%"></th>
+          <th scope="col" style="width: 10%"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let jogo of jogos">
+          <th scope="row" class="text-center align-middle">{{jogo.id}}</th>
+          <td class="align-middle">{{jogo.nome}}</td>
+          <td class="align-middle">
+            <div class="botoes">
+              <a routerLink="/jogo-editar/{{jogo.id}}">Editar</a>
+            </div>
+          </td>
+          <td class="align-middle">
+            <div class="botoes">
+              <a (click)="deletarJogo(jogo.id)">Deletar</a>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h1>Usuarios</h1>
+  <div class="col-10 mt-3">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col" style="width: 5%" class="text-center">Id</th>
+          <th scope="col">Nome</th>
+          <th scope="col" style="width: 10%"></th>
+          <th scope="col" style="width: 10%"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let usuario of usuarios">
+          <th scope="row" class="text-center align-middle">{{usuario.id}}</th>
+          <td class="align-middle">{{usuario.nomeUsuario}}</td>
+          <td class="align-middle">
+            <!-- <div class="botoes">
+              <a routerLink="/jogo-editar/{{jogo.id}}">Editar</a>
+            </div> -->
+          </td>
+          <td class="align-middle">
+            <div class="botoes">
+              <a (click)="deletarUsuario(usuario.id)">Deletar</a>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
