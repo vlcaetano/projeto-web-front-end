@@ -137,6 +137,26 @@
       "maisVendido": false,
       "novidade": false,
       "descricao": "Hades é um jogo roguelike que combina os melhores aspectos dos títulos da Supergiant aclamados pela crítica, incluindo a ação rápida de Bastion, a rica atmosfera e profundidade de Transistor e a narrativa baseada em personagens de Pyre. <br><br> Na pele do imortal Príncipe do Submundo, você usará os poderes e as armas míticas do Olimpo para se libertar das garras do deus dos mortos, enquanto se fortalece e descobre mais sobre a história a cada tentativa única de fuga. <br><br> Os deuses do Olimpo vão te ajudar! Conheça Zeus, Atena, Poseidon e muitos outros, e escolha entre dezenas de Dádivas poderosas que aprimoram suas habilidades. Existem milhares de construções possíveis de personagens para descobrir à medida que avança."
+    },
+    {
+      "id": 12,
+      "nome": "Green Hell",
+      "imgRetrato": "https://cdn-products.eneba.com/resized-products/uiAcncxmFfJ3JRqLjaW3EemyTDu1rK1f7QMoflzY6B4_350x200_1x-0.jpg",
+      "imgPaisagem": "https://cdn-cf.gamivo.com/image_cover.jpg?f=45535&n=07118213293129383.jpg&h=fc313a2c35582b5c0f171a8d38be5ec9",
+      "destaque": false,
+      "maisVendido": false,
+      "novidade": false,
+      "descricao": "Você está sozinho na selva sem comida ou equipamentos, tentando sobreviver e buscando uma maneira de escapar. À beira da morte, o jogador é colocado em uma jornada de resistência já que os efeitos do isolamento afetam fortemente não só o corpo, mas também a mente. Por quanto tempo você conseguirá sobreviver aos perigos do desconhecido?\n\nNesta jornada, você não receberá nenhuma ajuda do mundo exterior. Equipado apenas com suas próprias mãos, você deverá aprender técnicas reais de sobrevivência para construir abrigos, fazer ferramentas e construir armas para caçar e se defender. Constantemente ameaçado pela selva, você lutará tanto contra animais selvagens quanto doenças tropicais. Os jogadores também enfrentarão armadilhas elaboradas por suas próprias mentes e medos que se arrastam pela escuridão da selva sem fim."
+    },
+    {
+      "id": 13,
+      "nome": "Crysis 3",
+      "imgRetrato": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1slc.png",
+      "imgPaisagem": "https://steamcdn-a.akamaihd.net/steam/apps/1282690/capsule_616x353.jpg?t=1591304094",
+      "destaque": false,
+      "maisVendido": false,
+      "novidade": false,
+      "descricao": "O destino do mundo está em suas mãos. Inimigos novos e antigos ameaçam a paz que você lutou tanto para conseguir 24 anos atrás. A sua busca pelo Alpha Ceph continua, mas desta vez você também precisará expor a verdade por trás da C.E.L.L. Corporation. Não será fácil, mas seu Nanotraje ajudará a abrir um caminho para a vitória. Execute um ataque furtivo para derrotar seus adversários silenciosamente ou dizime o inimigo com uma explosão de força bruta. Não existe forma errada de salvar o mundo."
     }
   ]
 }
