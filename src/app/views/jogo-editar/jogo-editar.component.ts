@@ -31,6 +31,7 @@ export class JogoEditarComponent implements OnInit {
         this.jogoForm.setValue({
           id: jogo.id,
           nome: jogo.nome,
+          preco: jogo.preco,
           imgRetrato: jogo.imgRetrato,
           imgPaisagem: jogo.imgPaisagem,
           destaque: jogo.destaque,
@@ -45,6 +46,7 @@ export class JogoEditarComponent implements OnInit {
     this.jogoForm = this.fb.group({
       id: [null],
       nome: ['', Validators.required],
+      preco: [0, Validators.required],
       imgRetrato: ['', Validators.required],
       imgPaisagem: ['', Validators.required],
       destaque: [false],
@@ -68,6 +70,7 @@ export class JogoEditarComponent implements OnInit {
   }
 
   get nome() { return this.jogoForm.get('nome') }
+  get preco() { return this.jogoForm.get('preco') }
   get imgRetrato() { return this.jogoForm.get('imgRetrato') }
   get imgPaisagem() { return this.jogoForm.get('imgPaisagem') }
   get descricao() { return this.jogoForm.get('descricao') }

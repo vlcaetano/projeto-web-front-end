@@ -27,6 +27,7 @@ export class JogoCadastrarComponent implements OnInit {
       this.jogoForm = this.fb.group({
         id: [null],
         nome: ['', Validators.required],
+        preco: [null, Validators.required],
         imgRetrato: ['', Validators.required],
         imgPaisagem: ['', Validators.required],
         destaque: [false],
@@ -49,6 +50,7 @@ export class JogoCadastrarComponent implements OnInit {
   }
 
   get nome() { return this.jogoForm.get('nome') }
+  get preco() { return this.jogoForm.get('preco') }
   get imgRetrato() { return this.jogoForm.get('imgRetrato') }
   get imgPaisagem() { return this.jogoForm.get('imgPaisagem') }
   get descricao() { return this.jogoForm.get('descricao') }

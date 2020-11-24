@@ -1,9 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http'
 import { ReactiveFormsModule } from '@angular/forms'
+import localePtBr from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
 
 import { CarouselModule } from 'ngx-bootstrap/carousel'
 
@@ -22,6 +24,8 @@ import { PainelComponent } from './views/painel/painel.component';
 import { JogoEditarComponent } from './views/jogo-editar/jogo-editar.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { JogoCadastrarComponent } from './views/jogo-cadastrar/jogo-cadastrar.component';
+
+registerLocaleData(localePtBr, 'pt-BR');
 
 @NgModule({
   declarations: [
@@ -49,7 +53,12 @@ import { JogoCadastrarComponent } from './views/jogo-cadastrar/jogo-cadastrar.co
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: LOCALE_ID,
+      useValue: 'pt-BR'
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -6,6 +6,8 @@
 
   <div class="texto" [innerHTML]="jogo.descricao"></div>
 
+  <h3 *ngIf="!jogoComprado">{{jogo.preco | currency:'BRL'}}</h3>
+
   <div *ngIf="!usuario" class="erro-compra">
     Faça login para comprar
   </div>

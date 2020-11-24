@@ -16,6 +16,7 @@ export class JogoDetalhesComponent implements OnInit {
   public jogo: Jogo = {
     id: null,
     nome: '',
+    preco: null,
     imgRetrato: '',
     imgPaisagem: '',
     descricao: '',

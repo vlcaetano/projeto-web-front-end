@@ -17,6 +17,20 @@
     </div>
 
     <div class="form-group">
+      <label for="preco">Preço (R$)</label>
+      <input 
+        type="number"
+        class="form-control" 
+        id="preco" 
+        name="preco" 
+        formControlName="preco"
+      >
+      <div *ngIf="preco.invalid && (preco.touched || submitted)" class="erro">
+        **Campo obrigatório
+      </div>
+    </div>
+
+    <div class="form-group">
       <label for="imgRetrato">Imagem Retrato</label>
       <input 
         type="text" 

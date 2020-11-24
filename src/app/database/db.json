@@ -31,6 +31,7 @@
     {
       "id": 1,
       "nome": "Borderlands 3",
+      "preco": 119.9,
       "imgRetrato": "assets/img/retrato/borderlands3.png",
       "imgPaisagem": "assets/img/paisagem/borderlands3.png",
       "destaque": true,
@@ -41,6 +42,7 @@
     {
       "id": 2,
       "nome": "Marvel's Avengers",
+      "preco": 99.99,
       "imgRetrato": "assets/img/retrato/avengers.png",
       "imgPaisagem": "assets/img/paisagem/avengers.png",
       "destaque": false,
@@ -51,6 +53,7 @@
     {
       "id": 3,
       "nome": "Call of Duty: Black Ops Cold War",
+      "preco": 229.9,
       "imgRetrato": "assets/img/retrato/cod.png",
       "imgPaisagem": "assets/img/paisagem/cod.png",
       "destaque": false,
@@ -61,6 +64,7 @@
     {
       "id": 4,
       "nome": "Samurai Jack: Battle Through Time",
+      "preco": 75.99,
       "imgRetrato": "assets/img/retrato/samurai.png",
       "imgPaisagem": "assets/img/paisagem/samurai.png",
       "destaque": false,
@@ -71,6 +75,7 @@
     {
       "id": 5,
       "nome": "Monster Hunter World: Iceborne",
+      "preco": 89.99,
       "imgRetrato": "assets/img/retrato/monster.png",
       "imgPaisagem": "assets/img/paisagem/monster.png",
       "destaque": false,
@@ -81,6 +86,7 @@
     {
       "id": 6,
       "nome": "Poly Bridge",
+      "preco": 20.69,
       "imgRetrato": "assets/img/retrato/polybridge.png",
       "imgPaisagem": "assets/img/paisagem/polybridge.png",
       "destaque": false,
@@ -91,6 +97,7 @@
     {
       "id": 7,
       "nome": "Fall Guys",
+      "preco": 37.99,
       "imgRetrato": "assets/img/retrato/fallguys.png",
       "imgPaisagem": "assets/img/paisagem/fallguys.png",
       "destaque": false,
@@ -101,6 +108,7 @@
     {
       "id": 8,
       "nome": "Among Us",
+      "preco": 10.89,
       "imgRetrato": "assets/img/retrato/amongus.png",
       "imgPaisagem": "assets/img/paisagem/amongus.png",
       "destaque": false,
@@ -111,6 +119,7 @@
     {
       "id": 9,
       "nome": "Mafia: Definitive Edition",
+      "preco": 229.9,
       "imgRetrato": "assets/img/retrato/mafiade.png",
       "imgPaisagem": "assets/img/paisagem/mafiade.png",
       "destaque": false,
@@ -121,6 +130,7 @@
     {
       "id": 10,
       "nome": "Resident Evil 2",
+      "preco": 89.99,
       "imgRetrato": "assets/img/retrato/re2.png",
       "imgPaisagem": "assets/img/paisagem/re2.png",
       "destaque": true,
@@ -131,6 +141,7 @@
     {
       "id": 11,
       "nome": "Hades",
+      "preco": 47.49,
       "imgRetrato": "assets/img/retrato/hades.png",
       "imgPaisagem": "assets/img/paisagem/hades.png",
       "destaque": true,
@@ -141,8 +152,9 @@
     {
       "id": 12,
       "nome": "Green Hell",
+      "preco": 47.49,
       "imgRetrato": "https://cdn-products.eneba.com/resized-products/uiAcncxmFfJ3JRqLjaW3EemyTDu1rK1f7QMoflzY6B4_350x200_1x-0.jpg",
-      "imgPaisagem": "https://cdn-cf.gamivo.com/image_cover.jpg?f=45535&n=07118213293129383.jpg&h=fc313a2c35582b5c0f171a8d38be5ec9",
+      "imgPaisagem": "https://projectn.com.br/wp-content/uploads/2020/11/7e1518_cff080cbbae743439723d7455d525f82_mv2.jpg",
       "destaque": false,
       "maisVendido": false,
       "novidade": false,
@@ -151,6 +163,7 @@
     {
       "id": 13,
       "nome": "Crysis 3",
+      "preco": 89,
       "imgRetrato": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1slc.png",
       "imgPaisagem": "https://steamcdn-a.akamaihd.net/steam/apps/1282690/capsule_616x353.jpg?t=1591304094",
       "destaque": false,

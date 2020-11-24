@@ -1,13 +1,14 @@
 <div class="flex-container">
-    <h1>Todos os Jogos</h1>
-    <div class="flex-container-jogos">
-        <div class="jogo" *ngFor="let jogo of jogos">
-            <a class="link-jogo" routerLink="/jogo-detalhes/{{jogo.id}}">
-                <img src={{jogo.imgRetrato}} />
-                <div class="jogo-nome">
-                    <h4>{{jogo.nome}}</h4>
-                </div>
-            </a>
+  <h1>Todos os Jogos</h1>
+  <div class="flex-container-jogos">
+    <div class="jogo" *ngFor="let jogo of jogos">
+      <a class="link-jogo" routerLink="/jogo-detalhes/{{jogo.id}}">
+        <img src={{jogo.imgRetrato}} />
+        <div class="jogo-nome">
+          <h4>{{jogo.nome}}</h4>
+          <h5>{{jogo.preco | currency:'BRL'}}</h5>
         </div>
+      </a>
     </div>
+  </div>
 </div>

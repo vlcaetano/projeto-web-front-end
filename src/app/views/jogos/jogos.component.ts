@@ -13,8 +13,8 @@ export class JogosComponent implements OnInit {
   jogos: Array<Jogo> = []
 
   constructor(private jogosService: JogosService) { 
-    this.jogosService.getAll().subscribe((x: Jogo[]) => {
-      this.jogos = x
+    this.jogosService.getAll().subscribe((jogos: Jogo[]) => {
+      this.jogos = jogos
     })
   }
 
