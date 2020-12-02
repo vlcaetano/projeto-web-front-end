@@ -25,6 +25,15 @@
         2
       ],
       "admin": false
+    },
+    {
+      "id": 4,
+      "nomeCompleto": "Nikolas Sigilião Viana de Andrade",
+      "nomeUsuario": "NickSigiliao",
+      "email": "nicksigiliao@email.com",
+      "senha": "nicksigiliao",
+      "jogosComprados": [],
+      "admin": false
     }
   ],
   "jogos": [

@@ -8,22 +8,19 @@ import localePtBr from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
 
 import { CarouselModule } from 'ngx-bootstrap/carousel'
-
 import { AppRoutingModule } from './app-routing.module';
+
+import { JogosModule } from './jogos/jogos.module';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { HomeComponent } from './views/home/home.component';
-import { BibliotecaComponent } from './views/biblioteca/biblioteca.component';
-import { LojaComponent } from './views/loja/loja.component';
-import { JogosComponent } from './views/jogos/jogos.component';
-import { PesquisarComponent } from './views/pesquisar/pesquisar.component';
-import { CadastroComponent } from './views/cadastro/cadastro.component';
-import { JogoDetalhesComponent } from './views/jogo-detalhes/jogo-detalhes.component';
-import { PainelComponent } from './views/painel/painel.component';
-import { JogoEditarComponent } from './views/jogo-editar/jogo-editar.component';
+import { HomeComponent } from './home/home.component';
+
+import { LojaComponent } from './loja/loja.component';
+import { CadastroComponent } from './cadastro/cadastro.component';
+import { PainelComponent } from './painel/painel.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
-import { JogoCadastrarComponent } from './views/jogo-cadastrar/jogo-cadastrar.component';
 
 registerLocaleData(localePtBr, 'pt-BR');
 
@@ -33,16 +30,10 @@ registerLocaleData(localePtBr, 'pt-BR');
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    BibliotecaComponent,
     LojaComponent,
-    JogosComponent,
-    PesquisarComponent,
     CadastroComponent,
-    JogoDetalhesComponent,
     PainelComponent,
-    JogoEditarComponent,
     CarouselComponent,
-    JogoCadastrarComponent
   ],
   imports: [
     CarouselModule,
@@ -51,7 +42,8 @@ registerLocaleData(localePtBr, 'pt-BR');
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    JogosModule,
   ],
   providers: [
     {
