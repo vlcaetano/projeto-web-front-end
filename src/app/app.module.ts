@@ -14,7 +14,6 @@ import { JogosModule } from './jogos/jogos.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './home/home.component';
 
 import { LojaComponent } from './loja/loja.component';
@@ -28,7 +27,6 @@ registerLocaleData(localePtBr, 'pt-BR');
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent,
     HomeComponent,
     LojaComponent,
     CadastroComponent,

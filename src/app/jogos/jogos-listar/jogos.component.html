@@ -11,4 +11,15 @@
       </a>
     </div>
   </div>
+
+  <div class="paginacao">
+    <p 
+      *ngFor="let pag of paginas" 
+      [ngClass]="{pagSelecionada: pagAtual === pag}" 
+      (click)="mudarPagina(pag)"
+    > 
+      {{pag}}
+    </p>
+  </div>
+
 </div>

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpResponse } from '@angular/common/http';
 
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
@@ -68,6 +68,13 @@ export class JogosService {
 
   editar(jogo: Jogo, id: number): Observable<Jogo> {
     return this.http.put<Jogo>(`${this.url}/${id}`, jogo)
+      .pipe(
+        catchError(this.handleError)
+      )
+  }
+
+  getJogosPorPagina(numPagina: number) : Observable<HttpResponse<Jogo[]>> {
+    return this.http.get<Jogo[]>(`${this.url}?_sort=nome&_page=${numPagina}&_limit=8`, { observe: 'response' })
       .pipe(
         catchError(this.handleError)
       )
