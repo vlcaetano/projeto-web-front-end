@@ -43,7 +43,6 @@
           <th scope="col" style="width: 5%" class="text-center">Id</th>
           <th scope="col">Nome</th>
           <th scope="col" style="width: 10%"></th>
-          <th scope="col" style="width: 10%"></th>
         </tr>
       </thead>
 
@@ -51,11 +50,6 @@
         <tr *ngFor="let usuario of usuarios">
           <th scope="row" class="text-center align-middle">{{usuario.id}}</th>
           <td class="align-middle">{{usuario.nomeUsuario}}</td>
-          <td class="align-middle">
-            <!-- <div class="botoes">
-              <a routerLink="/jogo-editar/{{jogo.id}}">Editar</a>
-            </div> -->
-          </td>
           <td class="align-middle">
             <div class="botoes">
               <a (click)="deletarUsuario(usuario.id)">Deletar</a>

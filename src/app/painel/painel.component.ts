@@ -34,6 +34,9 @@ export class PainelComponent implements OnInit {
 
   atualizarDados() {
     this.jogosService.getAll().subscribe((jogos: Jogo[]) => this.jogos = jogos)
-    this.loginService.getAll().subscribe((usuarios: Usuario[]) => this.usuarios = usuarios)
+    this.loginService.getAll().subscribe((usuarios: Usuario[]) =>{ 
+      //filtro para o admin não aparecer na tabela, logo não ser possível deletá-lo
+      this.usuarios = usuarios.filter((u: Usuario)=> u.id != 1) 
+    })
   }
 }
