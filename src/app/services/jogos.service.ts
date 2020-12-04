@@ -44,12 +44,16 @@ export class JogosService {
       )
   }
 
-  getJogosById(ids: number[]): Observable<Jogo>[] {
-    let jogos: Observable<Jogo>[] = []
-    for (let jogoId of ids) {
-      jogos.push(this.http.get<Jogo>(`${this.url}/${jogoId}`))
+  getJogosUsuario(ids: number[]): Observable<Jogo[]> {
+    if (ids.length === 0) {
+      return of<Jogo[]>([]) //retorna um Observable vazio
     }
-    return jogos
+
+    let JogosUsuarioURL: string = `${this.url}?`
+    for (const id of ids) {
+      JogosUsuarioURL = `${JogosUsuarioURL}&id=${id}`
+    }
+    return this.http.get<Jogo[]>(JogosUsuarioURL)
   }
 
   deletar(id: number) {

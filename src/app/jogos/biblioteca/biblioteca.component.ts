@@ -24,12 +24,10 @@ export class BibliotecaComponent implements OnInit {
 
     if (this.usuarioLogado) {
       
-      this.jogosService.getJogosById(this.usuarioLogado.jogosComprados)
-        .forEach((obsJogo) => {
-          obsJogo.subscribe((jogo) => {
-            this.jogos.push(jogo)
-            this.qtdJogos++
-          })
+      this.jogosService.getJogosUsuario(this.usuarioLogado.jogosComprados)
+        .subscribe((jogos: Jogo[]) => {
+          this.jogos = jogos
+          this.qtdJogos = jogos.length
         })
     }
   }
