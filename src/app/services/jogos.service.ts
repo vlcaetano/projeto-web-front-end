@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpResponse } from '@angular/common/http';
 
-import { Observable, throwError } from 'rxjs';
+import { Observable, throwError, of } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 
 import { Jogo } from '../models/jogo.model';
@@ -75,6 +75,17 @@ export class JogosService {
 
   getJogosPorPagina(numPagina: number) : Observable<HttpResponse<Jogo[]>> {
     return this.http.get<Jogo[]>(`${this.url}?_sort=nome&_page=${numPagina}&_limit=8`, { observe: 'response' })
+      .pipe(
+        catchError(this.handleError)
+      )
+  }
+
+  getJogosPorNome(nome: string): Observable<Jogo[]> {
+    if (nome.length === 0) {
+      return of<Jogo[]>([]) //retorna um Observable vazio
+    }
+
+    return this.http.get<Jogo[]>(`${this.url}?_sort=nome&nome_like=${nome}`)
       .pipe(
         catchError(this.handleError)
       )

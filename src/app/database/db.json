@@ -152,7 +152,7 @@
       "nome": "Hades",
       "preco": 47.49,
       "imgRetrato": "assets/img/retrato/hades.png",
-      "imgPaisagem": "assets/img/paisagem/hades.png",
+      "imgPaisagem": "https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_download_software_1/H2x1_NSwitchDS_Hades_image1600w.png",
       "destaque": true,
       "maisVendido": false,
       "novidade": false,

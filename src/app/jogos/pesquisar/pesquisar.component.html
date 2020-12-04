@@ -1,20 +1,24 @@
-<!-- <body> -->
-    <div class="flex-container">
-        <h1>Pesquisar</h1>
-        <div class="pesquisar">
-            <input type="text" placeholder="Nome do jogo...">
-            <div class="button">
-                <a > <!-- routerLink="/" -->
-                    <img src="assets/img/pesquisar.png" alt="Estudar">
-                </a>
-            </div>
-        </div>
+<div class="flex-container">
+  <h1>Pesquisar</h1>
+  <div class="pesquisar">
+    <input [formControl]="nomeQuery" name="nomeQuery" type="text" placeholder="Nome do jogo...">
+  </div>
 
-        <div class="horizontal-line"></div>
-        
-        <div class="resultado-pesquisa">
-            <p>Nenhum jogo encontrado <br> para a sua pesquisa</p>
-        </div>
+  <div class="horizontal-line"></div>
 
+  <div *ngIf="!jogos[0] && nomeQuery.touched && nomeQuery.value.length != 0" class="resultado-pesquisa">
+    <p>Nenhum jogo encontrado <br> para a sua pesquisa</p>
+  </div>
+
+  <div *ngIf="jogos.length >= 0" class="flex-container-jogos">
+    <div class="jogo" *ngFor="let jogo of resultados | async">
+      <a class="link-jogo" routerLink="/jogo-detalhes/{{jogo.id}}">
+        <img src={{jogo.imgRetrato}} />
+        <div class="jogo-nome">
+          <h4>{{jogo.nome}}</h4>
+          <h5>{{jogo.preco | currency:'BRL'}}</h5>
+        </div>
+      </a>
     </div>
-<!-- </body> -->
+
+</div>
