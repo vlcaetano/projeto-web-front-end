@@ -31,6 +31,9 @@ export class JogosComponent implements OnInit {
   }
 
   mudarPagina(pag: number) {
+    if (pag <= 0 || pag > this.paginas.length) {
+      return
+    }
     this.jogosService.getJogosPorPagina(pag).subscribe((jogos) => {
       this.jogos = jogos.body
     })

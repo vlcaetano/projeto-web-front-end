@@ -29,7 +29,7 @@ export class JogosService {
   }
 
   getAll(): Observable<Jogo[]> {
-    return this.http.get<Jogo[]>(this.url)
+    return this.http.get<Jogo[]>(`${this.url}?_sort=nome`)
       .pipe(
         retry(2),
         catchError(this.handleError)
