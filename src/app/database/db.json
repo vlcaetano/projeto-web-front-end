@@ -22,7 +22,8 @@
       "senha": "vitor",
       "jogosComprados": [
         1,
-        2
+        2,
+        11
       ],
       "admin": false
     },
@@ -178,7 +179,7 @@
       "destaque": false,
       "maisVendido": false,
       "novidade": false,
-      "descricao": "O destino do mundo está em suas mãos. Inimigos novos e antigos ameaçam a paz que você lutou tanto para conseguir 24 anos atrás. A sua busca pelo Alpha Ceph continua, mas desta vez você também precisará expor a verdade por trás da C.E.L.L. Corporation. Não será fácil, mas seu Nanotraje ajudará a abrir um caminho para a vitória. Execute um ataque furtivo para derrotar seus adversários silenciosamente ou dizime o inimigo com uma explosão de força bruta. Não existe forma errada de salvar o mundo."
+      "descricao": "O destino do mundo está em suas mãos. Inimigos novos e antigos ameaçam a paz que você lutou tanto para conseguir 24 anos atrás. A sua busca pelo Alpha Ceph continua, mas desta vez você também precisará expor a verdade por trás da C.E.L.L. Corporation. <br><br>Não será fácil, mas seu Nanotraje ajudará a abrir um caminho para a vitória. Execute um ataque furtivo para derrotar seus adversários silenciosamente ou dizime o inimigo com uma explosão de força bruta. Não existe forma errada de salvar o mundo."
     },
     {
       "id": 14,
